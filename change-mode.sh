@@ -17,7 +17,7 @@ do
             read -p "The mode was changed to default."
             ;;
         "Remove middle nodes")
-            sed 's/MiddleNodes/#MiddleNodes/' torrc.txt
+            sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
             read -p "Middle nodes were removed"
             ;;
     esac
