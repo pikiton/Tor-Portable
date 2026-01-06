@@ -16,6 +16,10 @@ read -p "The mode was changed to default."
 fi
 if [[ $INP = 3 ]]; then
 echo
+ if grep -q "#MiddleNodes" torrc.txt; then
+ read -p "Middle nodes are already not in use."
+ exit
+ fi
 sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
 read -p "Middle nodes were removed."
 fi
