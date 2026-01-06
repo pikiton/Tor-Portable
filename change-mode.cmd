@@ -20,5 +20,6 @@ exit
 )
 if %errorlevel% EQU 3 (
 powershell -Command " (gc """%CD%\torrc.txt""") -replace 'MiddleNodes', '#MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
+echo Middle nodes were removed.
 pause
 )
