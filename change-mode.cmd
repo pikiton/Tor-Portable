@@ -1,4 +1,5 @@
 @echo off & cd /d "%~dp0"
+setlocal EnableDelayedExpansion
 taskkill /im tor.exe >nul 2>&1
 sc query "Tor Win32 Service" >nul
 if %errorlevel% EQU 0 (
@@ -17,6 +18,12 @@ echo The mode was changed to default.
 pause
 )
 if %errorlevel% EQU 3 (
+findstr /c:"#MiddleNodes" torrc.txt
+if !errorlevel! EQU 0 (
+echo Middle nodes are already not in use.
+pause
+exit
+)
 powershell -Command " (gc """%CD%\torrc.txt""") -replace 'MiddleNodes', '#MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
 echo Middle nodes were removed.
 pause
