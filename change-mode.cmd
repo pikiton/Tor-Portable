@@ -5,21 +5,20 @@ if %errorlevel% EQU 0 (
 call service-manager.cmd
 timeout /t 3 /nobreak
 )
-findstr /c:"The mode is default" torrc.txt
-if %errorlevel% EQU 0 (
+choice /c 123 /n /m "Welcome to the mode control panel. Do you want to set the mode to pro (1), set the mode to default (2), or remove middle nodes (3)?"
+if %errorlevel% EQU 1 (
 copy "%CD%\change-mode\pro\torrc.txt" "%CD%\torrc.txt"
 echo The mode was changed to pro.
 pause
 exit
 )
-findstr /c:"The mode is pro" torrc.txt
-if %errorlevel% EQU 0 (
+if %errorlevel% EQU 2 (
 copy "%CD%\change-mode\default\torrc.txt" "%CD%\torrc.txt"
 echo The mode was changed to default.
 pause
 exit
-) else (
-copy "%CD%\change-mode\default\torrc.txt" "%CD%\torrc.txt"
-echo An error occurred. Attempted to set the mode to default. The error should be gone.
+)
+if %errorlevel% EQU 3 (
+powershell -Command " (gc """%CD%\torrc.txt""") -replace 'MiddleNodes', '#MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
 pause
 )
