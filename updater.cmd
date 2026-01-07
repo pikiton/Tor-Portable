@@ -33,9 +33,9 @@ echo del "%WAY%\AntiTor_win8+_current.zip"
 echo xcopy "%temp%\data" "%CD%\data" /i /e /y
 echo rmdir "%temp%\data" /s /q
 echo findstr /c:"The mode is pro" "%CD%\data\torrc.txt"
-echo if %%errorLevel%% EQU 0 copy "%CD%\change-mode\pro\torrc.txt" "%CD%\torrc.txt"
+echo if %%errorlevel%% EQU 0 copy "%CD%\change-mode\pro\torrc.txt" "%CD%\torrc.txt"
 echo findstr /c:"#MiddleNodes" "%CD%\data\torrc.txt"
-echo if %%errorLevel%% EQU 0 powershell -Command " (gc """%CD%\torrc.txt""") -replace 'MiddleNodes', '#MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
+echo if %%errorlevel%% EQU 0 powershell -Command " (gc """%CD%\torrc.txt""") -replace 'MiddleNodes', '#MiddleNodes' | Out-File """%CD%\torrc.txt""" -encoding default
 echo del "%temp%\updater.cmd"
 echo del "%temp%\extractor.vbs"
 echo del "%temp%\cleaner.cmd"
