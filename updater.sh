@@ -25,3 +25,6 @@ rm -r ~/data
 if grep -q "The mode is pro" ./data/torrc.txt; then
 cp ./change-mode/pro/torrc.txt torrc.txt
 fi
+if grep -q "#MiddleNodes" ./data/torrc.txt; then
+sed -i 's/MiddleNodes/#MiddleNodes/' torrc.txt
+fi
