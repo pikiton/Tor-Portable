@@ -1,4 +1,4 @@
-**[РУССКОЕ ЧИТАЙМЕНЯ](https://github.com/Verity-Freedom/Tor-Portable/blob/main/README-RU.md)**
+**[РУССКОЕ ЧИТАЙМЕНЯ](https://github.com/Chara-Freedom/Tor-Portable/blob/main/README-RU.md)**
 
 [Telegram channel](https://t.me/Tor_Portable)
 
@@ -27,16 +27,16 @@ Support me: 0xb9569717b5f1ee67a2ace2b999a61e3d8d4cce52 USDT BEP20, https://www.d
  </picture>
 </a>
 
-Developed with community support (especially thanks to [bananakid](https://github.com/anticensority/runet-censorship-bypass/issues/224#issuecomment-2025676123) and [DesuIsALie](https://github.com/Verity-Freedom/Tor-Portable/issues/2#issuecomment-2362230547)).  
-The main author of Tor Portable is Verity Freedom. Concept, configurations, Win 7 patch, Linux portable deployment, [update system](https://github.com/Verity-Freedom/GRU), services, guide by Verity Freedom.  
+Developed with community support (especially thanks to [bananakid](https://github.com/anticensority/runet-censorship-bypass/issues/224#issuecomment-2025676123) and [DesuIsALie](https://github.com/Chara-Freedom/Tor-Portable/issues/2#issuecomment-2362230547)).  
+The main author of Tor Portable is Verity Freedom. Concept, configurations, Win 7 patch, Linux portable deployment, [update system](https://github.com/Chara-Freedom/GRU), services, guide by Verity Freedom.  
 [Win 7 patcher](https://github.com/stunndard/golangwin7patch) by stunnard.  
 [Hosts list](https://github.com/dartraiden/no-russia-hosts) by dartraiden.  
 The author of the [Antizapret proxy](http://antizapret.prostovpn.org/) is ValdikSS.  
 [Tor Expert Bundle](https://www.torproject.org/download/tor/) by Tor Project.  
 [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega) by FelisCatus, [ZeroOmega](https://github.com/zero-peak/ZeroOmega) by zero-top.  
 [Discord-drover](https://github.com/hdrover/discord-drover) by hdrover, [discord-linux-bypass](https://github.com/nik9play/discord-linux-bypass) by nik9play.  
-[Technical help](https://github.com/Verity-Freedom/Tor-Portable/commits?author=NoPlagiarism) by NoPlagiarism, also helped naming Tor bridges (private frozen project) and testing Webtunnel.  
-Win 7 and bitness tests ([1](https://github.com/Verity-Freedom/Tor-Portable/issues/8#issuecomment-2906773975), [2](https://github.com/Verity-Freedom/Tor-Portable/issues/21#issuecomment-2907699471)) by qwers99.  
+[Technical help](https://github.com/Chara-Freedom/Tor-Portable/commits?author=NoPlagiarism) by NoPlagiarism, also helped naming Tor bridges (private frozen project) and testing Webtunnel.  
+Win 7 and bitness tests ([1](https://github.com/Chara-Freedom/Tor-Portable/issues/8#issuecomment-2906773975), [2](https://github.com/Chara-Freedom/Tor-Portable/issues/21#issuecomment-2907699471)) by qwers99.  
 Tests and technical help in Linux [portable](https://github.com/NixOS/nixpkgs/issues/425977) [deployment](https://github.com/NixOS/nixpkgs/issues/427078) by imsweetdogs and 7c6f434c respectively.  
 Elevation system by [Matt](https://stackoverflow.com/a/12264592), [Verity Freedom](https://stackoverflow.com/a/79585058) and [Mofi](https://stackoverflow.com/questions/7044985/how-can-i-auto-elevate-my-batch-file-so-that-it-requests-from-uac-administrator/12264592#comment140920768_12264592) (professional review and editing), [Windows version checker](https://stackoverflow.com/a/75970274) by captain_majid.
 
@@ -54,7 +54,7 @@ Without further ado, here we go.
 
 ## Installation
 
-First of all, if you want an experience similar to Tor Portable on Android, there is a great program from Gedsh. I translated [the guide](https://github.com/Verity-Freedom/Tor-Portable/wiki/InviZible-Pro-EN) for you.
+First of all, if you want an experience similar to Tor Portable on Android, there is a great program from Gedsh. I translated [the guide](https://github.com/Chara-Freedom/Tor-Portable/wiki/InviZible-Pro-EN) for you.
 
 Tor Portable is hosted on the IPNS "eternal cloud", which is extremely convenient for independent information distribution, since proprietary clouds are unreliable (for many reasons, and even GitHub has mistakenly removed Tor Portable several times, making it unavailable). For this, pinata.cloud and ipns.ipfs.network were used. I don't recommend anyone to use free proprietary clouds like MEGA with their censorship and lack of features, as dependence on them deprives you of technological sovereignty.
 
@@ -95,8 +95,8 @@ Tor Portable itself has two modes: pro and default, which are switched via the c
 
 ![5](https://github.com/user-attachments/assets/bc404d5e-f8eb-498d-a894-1aade051eedb)
 
-If you want to try to completely avoid restrictions from sites like Grok.com, you should install [Psiphon TM](https://github.com/Verity-Freedom/Tor-Portable/releases/tag/v1.0), and change the setting of VIRTUAL mode from TOR to PROXY. But I'm not recommending this to everyone, since Psiphon TM is not that properly developed (at the time of writing), and is much slower than Tor. I should try to at least create the Linux version of it, but I use it on my Windows the way it is.
+If you want to try to completely avoid restrictions from sites like Grok.com, you should install [Psiphon TM](https://github.com/Chara-Freedom/Tor-Portable/releases/tag/v1.0), and change the setting of VIRTUAL mode from TOR to PROXY. But I'm not recommending this to everyone, since Psiphon TM is not that properly developed (at the time of writing), and is much slower than Tor. I should try to at least create the Linux version of it, but I use it on my Windows the way it is.
 
-Updater is updater. It updates everything fast and seamlessly. I'm really proud that I made it. [It follows GRU specs](https://github.com/Verity-Freedom/GRU).
+Updater is updater. It updates everything fast and seamlessly. I'm really proud that I made it. [It follows GRU specs](https://github.com/Chara-Freedom/GRU).
 
-That's all for now. You can write anything to me [here](https://github.com/Verity-Freedom/Tor-Portable/issues/8). Good luck.
+That's all for now. You can write anything to me [here](https://github.com/Chara-Freedom/Tor-Portable/issues/8). Good luck.
