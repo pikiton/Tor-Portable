@@ -95,6 +95,6 @@ Tor Portable itself has two modes: pro and default, which are switched via the c
 
 If you want to try to completely avoid restrictions from sites like Grok.com, you should install [Psiphon TM](https://github.com/Chara-Freedom/Tor-Portable/releases/tag/v1.0), and change the setting of VIRTUAL mode from TOR to PROXY. But I'm not recommending this to everyone, since Psiphon TM is not that properly developed (at the time of writing), and is much slower than Tor. I should try to at least create the Linux version of it, but I use it on my Windows the way it is.
 
-Updater is updater. It updates everything fast and seamlessly. I'm really proud that I made it. [It follows GRU specs](https://github.com/Chara-Freedom/GRU).
+Updater is updater. It updates everything fast and seamlessly. I'm really proud that I made it. [It follows GRU specs](https://github.com/Chara-Freedom/GRU-current).
 
 That's all for now. You can write anything to me [here](https://github.com/Chara-Freedom/Tor-Portable/issues/8). Good luck.
