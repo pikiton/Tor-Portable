@@ -12,6 +12,7 @@ char buffer[100];
 string UPD;
 while (fgets(buffer, sizeof(buffer), pipe) != NULL) UPD += buffer;
 _pclose(pipe);
+string link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
 _wchdir(L"./tor");
 system("start /min tor.exe -f ../torrc.txt");
 }
