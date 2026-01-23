@@ -9,9 +9,9 @@ WCHAR path[MAX_PATH];
 GetModuleFileNameW(NULL, path, MAX_PATH);
 filesystem::path fullpath(path);
 filesystem::current_path(fullpath.remove_filename());
-FILE* pipe = _popen("@echo off & for %I in (VERSION*) do echo %~nxI", "r");
 char buffer[256];
 string UPD;
+FILE* pipe = _popen("@echo off & for %I in (VERSION*) do echo %~nxI", "r");
 while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
 buffer[strcspn(buffer, "\n")] = 0;
 UPD += buffer;
