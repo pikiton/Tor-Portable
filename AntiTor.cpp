@@ -16,7 +16,6 @@ while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
 buffer[strcspn(buffer, "\n")] = 0;
 UPD += buffer;
 }
-_pclose(pipe);
 string link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
 string filename = "./tor/" + UPD;
 IStream* pStream = NULL;
@@ -26,6 +25,12 @@ char choice;
 cout << "The local version does not match the latest version. It means that update is available, but in edge cases marks accessibility issues. Press any key if you want to update or 0 to skip";
 choice = _getch();
 if (choice == '0') goto Skip;
+string TEMP;
+FILE* pipe = _popen("echo %TEMP%", "r");
+while (fgets(buffer, sizeof(buffer), pipe) != NULL) {
+buffer[strcspn(buffer, "\n")] = 0;
+TEMP += buffer;
+}
 return TRUE;
 }
 pStream->Release();
