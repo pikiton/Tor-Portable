@@ -57,8 +57,6 @@ buffer[strcspn(buffer, "\n")] = 0;
 PROC = buffer;
 }
 _pclose(pipe3);
-cout << PROC;
-cin.get();
 _wchdir(L"./tor");
 system("start /min tor -f ../torrc.txt");
 }
