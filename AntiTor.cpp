@@ -33,6 +33,9 @@ buffer[strcspn(buffer, "\n")] = 0;
 TEMP += buffer;
 }
 _pclose(pipe);
+string TEMPUPDATE = TEMP + "\\" + "autoupdate.cmd";
+ofstream outfile(TEMPUPDATE);
+outfile << "heyaaa";
 return TRUE;
 }
 pStream->Release();
