@@ -51,12 +51,14 @@ return TRUE;
 pStream->Release();
 Skip:
 string PROC;
-FILE* pipe3 = _popen("echo %PROCESSOR_ARCHITECTURE%", "r");
+FILE* pipe3 = _popen("IF DEFINED PROCESSOR_ARCHITEW6432 (echo AMD64) else (echo x86)", "r");
 while (fgets(buffer, sizeof(buffer), pipe3) != NULL) {
 buffer[strcspn(buffer, "\n")] = 0;
 PROC = buffer;
 }
 _pclose(pipe3);
+cout << PROC;
+cin.get();
 _wchdir(L"./tor");
 system("start /min tor -f ../torrc.txt");
 }
