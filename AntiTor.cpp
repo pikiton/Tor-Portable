@@ -37,7 +37,7 @@ buffer[strcspn(buffer, "\n")] = 0;
 TEMP = buffer;
 }
 _pclose(pipe2);
-string TEMPUPDATE = "\"" + TEMP + "\\" + "autoupdate.cmd" + "\"";
+string TEMPUPDATE = "\"" + TEMP + "\"" + "\\" + "autoupdate.cmd";
 ofstream outfile(TEMPUPDATE);
 outfile << "@echo off" << endl;
 outfile << "call " << fullpath << "updater.cmd" << endl;
