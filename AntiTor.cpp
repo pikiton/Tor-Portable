@@ -64,12 +64,17 @@ if (system("sc query \"Tor Win32 Service\" >nul") == 0) {
 system("call service-manager.cmd");
 system("timeout /t 3 /nobreak");
 }
-if (PROC.find('8') != string::npos || !(IsWindows8OrGreater()) && !filesystem::exists("C:\\Windows\\Sysnative\\acryptprimitives.dll")) {
+if (PROC.find('8') != string::npos || !(IsWindows8OrGreater()) && !filesystem::exists("C:\\Windows\\Sysnative\\acryptprimitives.dll") && !filesystem::exists("C:\\Windows\\System32\\acryptprimitives.dll")) {
 if (system("net session >nul 2>&1") != 0) {
 ShellExecuteW(NULL, (L"runas"), (pathname.c_str()), NULL, NULL, SW_SHOWNORMAL);
 return 0;
 }
+if (PROC.find('4') && !filesystem::exists("C:\\Windows\\Sysnative\\acryptprimitives.dll")) {
 system("copy \"%CD%\\oldwin\\acryptprimitives.dll\" \"C:\\Windows\\Sysnative\\acryptprimitives.dll\"");
+}
+if (PROC.find('8') && !filesystem::exists("C:\\Windows\\System32\\acryptprimitives.dll")) {
+system("copy \"%CD%\\oldwin\\acryptprimitives.dll\" \"C:\\Windows\\System32\\acryptprimitives.dll\"");
+}
 }
 _wchdir(L"./tor");
 system("start /min tor -f ../torrc.txt");
