@@ -37,7 +37,7 @@ buffer[strcspn(buffer, "\n")] = 0;
 TEMP = buffer;
 }
 _pclose(pipe2);
-string TEMPUPDATE = "\"" + TEMP + "\"" + "\\" + "autoupdate.cmd";
+string TEMPUPDATE = "\"" + TEMP + "\\" + "autoupdate.cmd" + "\"";
 ofstream outfile(TEMPUPDATE);
 outfile << "@echo off" << endl;
 outfile << "call " << fullpath << "updater.cmd" << endl;
@@ -45,8 +45,7 @@ outfile << "cls" << endl;
 outfile << ":Wait" << endl;
 outfile << "if not exist " << fullpath << "torrc.txt" << " GOTO Wait" << endl;
 outfile << "timeout /t 1 /nobreak" << endl;
-outfile << "call " << pathname << endl;
-outfile << "start \"\" cmd /c del " << TEMPUPDATE;
+outfile << "call " << pathname;
 string finale = "start "" cmd /c " + TEMPUPDATE;
 system(finale.c_str());
 return TRUE;
