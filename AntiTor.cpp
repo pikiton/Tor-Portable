@@ -20,9 +20,7 @@ UPD = buffer;
 }
 _pclose(pipe1);
 string link;
-if (UPD.find('V') != string::npos) {
-link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
-}
+if (UPD.find('V') != string::npos) link = "https://ipfs.io/ipns/k51qzi5uqu5dldod6robuflgitvj276br0xye3adipm3kc0bh17hfiv1e0hnp4/" + UPD;
 IStream* pStream = NULL;
 if (FAILED(URLOpenBlockingStream(0, link.c_str(), &pStream, 0, 0)))
 {
@@ -69,12 +67,8 @@ if (system("net session >nul 2>&1") != 0) {
 ShellExecuteW(NULL, (L"runas"), (pathname.c_str()), NULL, NULL, SW_SHOWNORMAL);
 return 0;
 }
-if (PROC.find('4') != string::npos) {
-system("copy \"%CD%\\oldwin\\acryptprimitives.dll\" \"C:\\Windows\\Sysnative\\acryptprimitives.dll\"");
-}
-if (PROC.find('8') != string::npos) {
-system("copy \"%CD%\\oldwin\\acryptprimitives.dll\" \"C:\\Windows\\System32\\acryptprimitives.dll\"");
-}
+if (PROC.find('4') != string::npos) system("copy \"%CD%\\oldwin\\acryptprimitives.dll\" \"C:\\Windows\\Sysnative\\acryptprimitives.dll\"");
+if (PROC.find('8') != string::npos) system("copy \"%CD%\\oldwin\\acryptprimitives.dll\" \"C:\\Windows\\System32\\acryptprimitives.dll\"");
 }
 _wchdir(L"./tor");
 system("start /min tor -f ../torrc.txt");
